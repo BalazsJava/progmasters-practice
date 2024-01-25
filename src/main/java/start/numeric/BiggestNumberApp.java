@@ -4,11 +4,6 @@ import java.util.Scanner;
 
 public class BiggestNumberApp {
 
-    /**
-     * Prints out the biggest number from the input.
-     *
-     * @param args the numbers provided by the user.
-     */
     public static void main(String[] args) {
         // Implement an application that takes 3 numbers (int) in a row, then it should print the biggest number
         Scanner sc = new Scanner(System.in);
@@ -25,5 +20,10 @@ public class BiggestNumberApp {
         } else if (a == b && a == c) {
             System.out.println("The biggest");
         }
+
+        // BONUS:
+        // Make an application that asks ANY number of integers
+        // Print the biggest number
     }
+
 }
