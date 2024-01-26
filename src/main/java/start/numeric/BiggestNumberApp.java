@@ -24,6 +24,9 @@ public class BiggestNumberApp {
         // BONUS:
         // Make an application that asks ANY number of integers
         // Print the biggest number
+
+        // BONUS 2:
+        // Solve the same task using Java Streams, instead of if(...) cases
     }
 
 }
