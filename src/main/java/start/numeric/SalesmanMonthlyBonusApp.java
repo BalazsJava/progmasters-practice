@@ -16,14 +16,18 @@ public class SalesmanMonthlyBonusApp {
         // Input: 1000000 -> Output: 100000
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Írd be a bevételed: ");
-        int bevétel = sc.nextInt();
+        System.out.println("Ird be a beveteled: ");
+        int bevetel = sc.nextInt();
 
-        if (bevétel >= 1000000) {
-            System.out.println("Jutalék: " + bevétel / 10);
-        } else if (bevétel < 1000000) {
-            System.out.println("Jutalék:" + 0);
+        if (bevetel >= 1000000) {
+            System.out.println("Jutalek: " + bevetel / 10);
+        } else if (bevetel < 1000000) {
+            System.out.println("Jutalek:" + 0);
         }
 
+        // EXTRA TASK:
+        // Modify the application using 15% bonus, also it should support more accurate results up to 2 decimals
+        // Example:
+        // Input: 3333333 -> Output: 499999.95
     }
 }
