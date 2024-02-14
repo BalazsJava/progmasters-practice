@@ -1,4 +1,4 @@
-package trialexam.goldbar;
+package trialexam.goldbar.simple.multiclass;
 
 import java.util.Scanner;
 
@@ -10,10 +10,9 @@ public class GoldBar {
         while (scanner.hasNextInt()) {
             int size = scanner.nextInt();
 
-            GoldBarPrinter goldBarPrinter = new GoldBarPrinter(size);
-            goldBarPrinter.printGoldBar();
+            SimpleGoldBarPrinter printer = new SimpleGoldBarPrinter(size);
+            printer.printGoldBar();
         }
-
     }
 
 }
