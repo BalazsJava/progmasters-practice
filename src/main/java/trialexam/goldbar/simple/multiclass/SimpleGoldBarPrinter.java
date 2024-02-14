@@ -1,15 +1,11 @@
-package trialexam.goldbar;
+package trialexam.goldbar.simple.multiclass;
 
-public class GoldBarPrinter {
+public class SimpleGoldBarPrinter {
 
-    private final int size;
     private final int sideSize;
-    private final int halfSideSize;
 
-    public GoldBarPrinter(int size) {
-        this.size = size;
+    public SimpleGoldBarPrinter(int size) {
         this.sideSize = size - 2;
-        this.halfSideSize = sideSize / 2;
     }
 
     public void printGoldBar() {
@@ -27,14 +23,8 @@ public class GoldBarPrinter {
     }
 
     private void printMid() {
-        int symbolLine = calculateMiddleOfSideSize(); // Can't print in middle at even size
-
         for (int i = 0; i < sideSize; i++) {
-            if (i == symbolLine) {
-                printSymbolMidLine();
-            } else {
-                printNormalMidLine();
-            }
+            printNormalMidLine();
             System.out.println(); // Next line
         }
     }
@@ -51,20 +41,6 @@ public class GoldBarPrinter {
         printNTimes("|", 1);
         printNTimes(" ", sideSize);
         printNTimes("|", 1);
-    }
-
-    private void printSymbolMidLine() {
-        int spacesToSymbol = calculateMiddleOfSideSize(); // Can't print in middle at even size
-
-        printNTimes("|", 1);
-        printNTimes(" ", spacesToSymbol);
-        printNTimes("G", 1);
-        printNTimes(" ", halfSideSize);
-        printNTimes("|", 1);
-    }
-
-    private int calculateMiddleOfSideSize() {
-        return size % 2 == 0 ? halfSideSize - 1 : halfSideSize;
     }
 
     private void printNTimes(String charToPrint, int times) {
